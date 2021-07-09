@@ -1,0 +1,39 @@
+pipeline{
+  agent any
+  stages{
+     stage('clone source code''){
+       steps{
+        git 'https://github.com/mahendra03/uday-api.git'
+     }
+    }
+    stage('maven build'){
+       steps{
+        echo "maven build the project"
+     }
+    }
+    Stage('deploy to dev'){
+    when {
+            branch 'develop'
+     }
+      steps{
+      echo 'deploy to develop'
+      }
+    }
+     Stage('deploy to test'){
+    when {
+            branch 'test'
+     }
+      steps{
+      echo 'deploy to test'
+      }
+    }
+     Stage('deploy to prd'){
+    when {
+            branch 'master'
+     }
+      steps{
+      echo 'deploy to master'
+      }
+    }
+}
+}
