@@ -3,13 +3,18 @@ pipeline{
   stages{
      stage(''){
        steps{
-        git ''
+        git 'https://github.com/mahendra03/uday-api.git'
      }
     }
-    stage(''){
+    stage('maven build'){
        steps{
-        git ''
+        echo "maven build the project"
      }
+    }
+    Stage('deploy to dev'){
+      steps{
+      
+      }
     }
 }
 }
