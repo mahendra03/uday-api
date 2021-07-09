@@ -8,7 +8,7 @@ pipeline{
     }
     stage('maven build'){
        steps{
-        echo "maven build the project"
+        echo 'maven build the project'
      }
     }
     Stage('deploy to dev'){
