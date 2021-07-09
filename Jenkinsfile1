@@ -1,0 +1,15 @@
+pipeline{
+  agent any
+  stages{
+     stage(''){
+       steps{
+        git ''
+     }
+    }
+    stage(''){
+       steps{
+        git ''
+     }
+    }
+}
+}
